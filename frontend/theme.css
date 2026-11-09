@@ -1,0 +1,167 @@
+/* A light glass finish for the original green theme. */
+:root {
+  --border: #dfe8df;
+  --bg: #f4f7f2;
+  background: var(--bg);
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 90% 0%, #dcece3 0, transparent 48%),
+    radial-gradient(ellipse at 15% 55%, #e7edda 0, transparent 46%),
+    linear-gradient(135deg, #f7f8f1, #f1f6f2 60%, #f7f8f2);
+  background-attachment: fixed;
+}
+
+.sidebar {
+  background: linear-gradient(160deg, #fffffff5, #f4f8f0ed);
+  border-right-color: #dce7dc;
+  box-shadow: 5px 0 28px #284b3805;
+}
+
+.topbar {
+  background: linear-gradient(110deg, #fffffff0, #f3f8f1eb);
+  border-bottom-color: #dce6db;
+  box-shadow: 0 1px 0 #ffffffa6 inset;
+}
+
+.brand-logo {
+  background: linear-gradient(145deg, #41806a, #245d4e 65%, #1d4e42);
+  box-shadow: 0 5px 13px #245d4e20, 0 1px 0 #ffffff30 inset;
+}
+
+.space-label {
+  background: linear-gradient(115deg, #ffffffb3, #edf3e6b3);
+  border-color: #dde7d7;
+  box-shadow: 0 1px 0 #fff inset;
+}
+
+.nav-item.active {
+  background: linear-gradient(110deg, #dfeedd, #eef4e7);
+  box-shadow: 0 1px 0 #ffffffc2 inset, 0 3px 10px #2e573509;
+}
+
+.sidebar-card {
+  background:
+    radial-gradient(ellipse at 100% 0%, #d8e6cb9c, transparent 70%),
+    linear-gradient(140deg, #ffffffc9, #edf3e3e6);
+  border-color: #dae5d2;
+  box-shadow: 0 1px 0 #fff inset, 0 7px 20px #345c3707;
+}
+
+.panel,
+.stat-card {
+  background: linear-gradient(140deg, #ffffffed, #fbfdf7e8);
+  border-color: #dee7dc;
+  box-shadow: 0 1px 0 #fff inset, 0 5px 22px #2e51350a;
+}
+
+.hero {
+  border-color: #356b58;
+  background: #245d4e;
+  box-shadow: 0 12px 28px #234f3b1a, 0 1px 0 #ffffff33 inset;
+}
+
+.hero:before {
+  opacity: 1;
+  background:
+    radial-gradient(ellipse at 95% 10%, #a6c88d4d, transparent 49%),
+    radial-gradient(ellipse at 65% 115%, #64ac8b4d, transparent 55%),
+    linear-gradient(115deg, #214f43 0%, #2e715d 65%, #527c5d 100%);
+}
+
+.time-disc {
+  background: linear-gradient(145deg, #f3ffe429, #d9f4dc0a);
+  border-color: #e7f4d68c;
+  box-shadow: 0 1px 0 #ffffff33 inset, 0 15px 30px #123b302e;
+}
+
+.hero-chip {
+  background: linear-gradient(130deg, #5b8a6fe6, #416f59e6);
+  border-color: #dceccb59;
+  box-shadow: 0 1px 0 #ffffff1f inset, 0 8px 18px #163b3125;
+}
+
+.floating-leaf {
+  background: linear-gradient(135deg, #d9e8b83b, #b3d39d12);
+  box-shadow: 0 1px 0 #ffffff24 inset;
+}
+
+.hero-button {
+  background: linear-gradient(120deg, #eef2d5, #d7e6b6);
+  box-shadow: 0 1px 0 #ffffff8c inset, 0 4px 12px #123c2524;
+}
+
+.hero-button:hover {
+  background: linear-gradient(120deg, #f4f7e2, #e4edc8);
+}
+
+.btn.primary {
+  background: linear-gradient(125deg, #34765f, #245d4e 80%);
+  box-shadow: 0 1px 0 #ffffff26 inset, 0 4px 10px #245d4e1c;
+}
+
+.btn.primary:hover {
+  background: linear-gradient(125deg, #2b6954, #194e40);
+}
+
+.btn.secondary,
+.search-input {
+  background: linear-gradient(130deg, #fffffff5, #f8fbf3ed);
+  box-shadow: 0 1px 0 #fff inset;
+}
+
+.insight-card {
+  background: linear-gradient(115deg, #eff5e8ed, #e8f1e2e6);
+  border-color: #dce7d4;
+  box-shadow: 0 1px 0 #ffffffb3 inset;
+}
+
+.info-strip {
+  background: linear-gradient(110deg, #eef5e8, #f5f8ed);
+}
+
+/* Keep text and answer fields on calm, nearly opaque reading surfaces. */
+.modal {
+  background: #fdfefb;
+  border: 1px solid #ffffffb3;
+  box-shadow: 0 25px 100px #17352c36, 0 1px 0 #fff inset;
+}
+
+.modal-head {
+  background: linear-gradient(115deg, #fdfefa, #f1f7ed);
+}
+
+.study-question {
+  background: #fffffd;
+}
+
+.study-answer {
+  background: #f7faf3;
+}
+
+.answer-textarea {
+  color: #39533c;
+  background: #fffffd;
+}
+
+/* Opaque backgrounds above are the fallback on browsers without glass support. */
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .sidebar {
+    background: linear-gradient(160deg, #ffffffb8, #f4f8f0b3);
+    -webkit-backdrop-filter: blur(20px) saturate(120%);
+    backdrop-filter: blur(20px) saturate(120%);
+  }
+
+  .topbar {
+    background: linear-gradient(110deg, #ffffffa3, #f3f8f194);
+    -webkit-backdrop-filter: blur(16px) saturate(115%);
+    backdrop-filter: blur(16px) saturate(115%);
+  }
+
+  .time-disc,
+  .hero-chip {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+}
